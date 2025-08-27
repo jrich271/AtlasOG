@@ -1,0 +1,30 @@
+import streamlit as st
+
+# Set page config
+st.set_page_config(page_title='AtlasOG', layout='wide')
+
+# Title
+st.title("🌍 AtlasOG Dashboard")
+st.markdown("Welcome to your live Atlas Operating System (AOG).")
+
+# Navigation tabs
+tab = st.sidebar.radio("Navigate", ["Wealth & Investments", "Homestead & Lifestyle", "Ideas & Research"])
+
+if tab == "Wealth & Investments":
+    st.header("📊 Wealth & Investments")
+    st.write("Track your assets, cashflow, and opportunities here.")
+    st.button("Add Investment")
+    st.button("Update Cashflow")
+
+elif tab == "Homestead & Lifestyle":
+    st.header("🏡 Homestead & Lifestyle")
+    st.write("Projects, routines, and daily freedom tasks.")
+    st.button("Add Project")
+    st.button("Check Tasks")
+
+elif tab == "Ideas & Research":
+    st.header("🧠 Ideas & Research")
+    st.write("Save Fuller-inspired insights and experiments.")
+    st.text_area("New Idea", "")
+
+st.success("✅ AtlasOG is live!")
